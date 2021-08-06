@@ -222,3 +222,11 @@ if start == 'yes':
             correct += 1
             total += 1
             print(f'Correct! You have gotten {correct} correct so far!')
+
+        elif question != state["capital"]:
+            incorrect += 1
+            total += 1
+            print(f'Sorry, that is incorrect. You have gotten {incorrect} incorrect so far.')
+
+else:
+    print('Maybe another time.')
