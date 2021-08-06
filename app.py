@@ -207,12 +207,16 @@ correct = 0
 incorrect = 0
 total = 0
 
+print('Welcome to the State Capitals game!')
+
 while total < 51:
 
     if total == 50:
         print(f'You have gone through all the states, the game is now over. Your final score was {correct} correct, and {incorrect} incorrect!')
 
-    print('Welcome to the State Capitals game!')
+        correct = 0
+        incorrect = 0
+        total = 0
 
     start = input('Do you want to start the game? [yes/no] ').lower()
 
