@@ -215,7 +215,7 @@ if start == 'yes':
     random.shuffle(state_capitals)
     
     for state in state_capitals:
-        question = input(f'What is the state capital of {state["name"]}? ').capitalize()
+        question = input(f'What is the state capital of {state["name"]}? ').title()
         print(f'You answered {question}')
 
         if question == state["capital"]:
