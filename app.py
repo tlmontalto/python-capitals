@@ -200,3 +200,13 @@ state_capitals = [
     "capital": "Cheyenne"
   }
 ]
+
+import random
+
+print('Welcome to the State Capitals game!')
+
+start = input('Do you want to start the game? [yes/no]').lower()
+
+if start == 'yes':
+    random.shuffle(state_capitals)
+    print('game has begun')
