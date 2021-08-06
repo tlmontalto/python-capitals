@@ -203,10 +203,17 @@ state_capitals = [
 
 import random
 
+correct = 0
+incorrect = 0
+total = 0
+
 print('Welcome to the State Capitals game!')
 
-start = input('Do you want to start the game? [yes/no]').lower()
+start = input('Do you want to start the game? [yes/no] ').lower()
 
 if start == 'yes':
     random.shuffle(state_capitals)
-    print('game has begun')
+    
+    for state in state_capitals:
+        question = input(f'What is the state capital of {state["name"]}? ')
+        print(question)
