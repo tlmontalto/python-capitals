@@ -207,26 +207,31 @@ correct = 0
 incorrect = 0
 total = 0
 
-print('Welcome to the State Capitals game!')
+while total < 51:
 
-start = input('Do you want to start the game? [yes/no] ').lower()
+    if total == 50:
+        print(f'You have gone through all the states, the game is now over. Your final score was {correct} correct, and {incorrect} incorrect!')
 
-if start == 'yes':
-    random.shuffle(state_capitals)
-    
-    for state in state_capitals:
-        question = input(f'What is the state capital of {state["name"]}? ').title()
-        print(f'You answered {question}')
+    print('Welcome to the State Capitals game!')
 
-        if question == state["capital"]:
-            correct += 1
-            total += 1
-            print(f'Correct! You have gotten {correct} correct so far!')
+    start = input('Do you want to start the game? [yes/no] ').lower()
 
-        elif question != state["capital"]:
-            incorrect += 1
-            total += 1
-            print(f'Sorry, that is incorrect. You have gotten {incorrect} incorrect so far.')
+    if start == 'yes':
+        random.shuffle(state_capitals)
+        
+        for state in state_capitals:
+            question = input(f'What is the state capital of {state["name"]}? ').title()
+            print(f'You answered {question}')
 
-else:
-    print('Maybe another time.')
+            if question == state["capital"]:
+                correct += 1
+                total += 1
+                print(f'Correct! You have gotten {correct} correct and {incorrect} incorrect so far.')
+
+            elif question != state["capital"]:
+                incorrect += 1
+                total += 1
+                print(f'Sorry, that is incorrect. You have gotten {correct} correct and {incorrect} incorrect so far.')
+
+    else:
+        print('Maybe another time.')
